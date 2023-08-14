@@ -1,0 +1,36 @@
+{
+    "name": "rollup-plugin-webext",
+    "version": "1.0.0",
+    "description": "Rollup plugin that makes it easy to develop Chrome / Firefox extensions",
+    "author": "Pauan <pauanyu+github@pm.me> (https://github.com/Pauan)",
+    "type": "module",
+    "main": "./index.js",
+    "exports": "./index.js",
+    "keywords": [
+        "webext",
+        "web-ext",
+        "web",
+        "extensions",
+        "web extensions",
+        "browser extensions",
+        "firefox",
+        "mozilla",
+        "add-ons",
+        "google",
+        "chrome",
+        "opera"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/Pauan/rollup-plugin-webext",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Pauan/rollup-plugin-webext.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Pauan/rollup-plugin-webext/issues",
+        "email": "pauanyu+github@pm.me"
+    },
+    "dependencies": {
+        "web-ext": "^7.6.2"
+    }
+}

@@ -84,4 +84,4 @@ webext({
 
 ### Example
 
-The [example](https://github.com/Pauan/rollup-plugin-webext/blob/example) directory contains a working example.
+The [example](https://github.com/Pauan/rollup-plugin-webext/tree/master/example) directory contains a working example.
