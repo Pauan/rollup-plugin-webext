@@ -44,6 +44,8 @@ export default {
 
    When publishing Firefox extensions, you need to [sign your extension](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/).
 
+It is recommended to use the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) package, so that way your extension will work in both Firefox and Chrome.
+
 ### Options
 
 These are the default options:
@@ -65,6 +67,13 @@ webext({
     // The possible browsers are: "firefox-desktop", "firefox-android", and "chromium"
     targets: ["firefox-desktop"],
 
+    // This allows you to specify a custom profile to use for the browser in watch mode.
+    // The default creates a new empty profile.
+    profiles: {
+        firefox: null,
+        chromium: null,
+    },
+
     // This allows you to specify a custom binary for the browsers which are opened in watch mode.
     binaries: {
         firefox: null,
@@ -79,6 +88,9 @@ webext({
         // The directory for the .zip file which is created in build mode.
         dir: "web-ext-artifacts",
     },
+
+    // Extra arguments which are passed to web-ext
+    webExtArgs: [],
 })
 ```
 

@@ -157,6 +157,16 @@ class WebExt {
                 }
             }
 
+            if (settings.profiles != null) {
+                if (settings.profiles.firefox != null) {
+                    args.push("--firefox-profile", settings.profiles.firefox);
+                }
+
+                if (settings.profiles.chromium != null) {
+                    args.push("--chromium-profile", settings.profiles.chromium);
+                }
+            }
+
             if (settings.targets != null) {
                 settings.targets.forEach((target) => {
                     args.push("--target", target);
@@ -166,6 +176,10 @@ class WebExt {
             if (settings.url != null) {
                 args.push("--start-url", settings.url);
             }
+
+            settings.webExtArgs.forEach((arg) => {
+                args.push(arg);
+            });
 
             if (this.process !== null) {
                 throw new Error("Invalid process state");
@@ -209,6 +223,10 @@ class WebExt {
                 }
             }
 
+            settings.webExtArgs.forEach((arg) => {
+                args.push(arg);
+            });
+
             // TODO ensure that it's killed properly ?
             spawn("web-ext", args, {
                 stdio: ["ignore", "inherit", "inherit"],
@@ -219,8 +237,6 @@ class WebExt {
 
 
 // TODO implement --config
-// TODO implement --firefox-profile and --chromium-profile
-// TODO implement --arg
 export default function webExt(settings = {}) {
     if (settings.devtools == null) {
         settings.devtools = true;
@@ -228,6 +244,10 @@ export default function webExt(settings = {}) {
 
     if (settings.targets == null) {
         settings.targets = ["firefox-desktop"];
+    }
+
+    if (settings.webExtArgs == null) {
+        settings.webExtArgs = [];
     }
 
     const state = new WebExt();
