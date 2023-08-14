@@ -1,6 +1,6 @@
 {
     "name": "rollup-plugin-webext",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Rollup plugin that makes it easy to develop Chrome / Firefox extensions",
     "author": "Pauan <pauanyu+github@pm.me> (https://github.com/Pauan)",
     "type": "module",
