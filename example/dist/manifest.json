@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Example",
+  "version": "1.0.0",
+  "description": "Example extension!",
+  "applications": {
+    "gecko": {
+      "id": "{992bedd8-279e-4ca7-8f01-e2a5dcc8de4e}"
+    }
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "page_action": {
+    "default_title": "Example",
+    "default_popup": "page_action.html",
+    "show_matches": ["<all_urls>"]
+  },
+  "browser_action": {
+    "default_title": "Example",
+    "default_popup": "browser_action.html"
+  }
+}

@@ -65,7 +65,7 @@ webext({
     // The possible browsers are: "firefox-desktop", "firefox-android", and "chromium"
     targets: ["firefox-desktop"],
 
-    // This allows you to specify a custom binary for Firefox / Chrome
+    // This allows you to specify a custom binary for the browsers which are opened in watch mode.
     binaries: {
         firefox: null,
         chromium: null,
@@ -81,3 +81,7 @@ webext({
     },
 })
 ```
+
+### Example
+
+The [example](https://github.com/Pauan/rollup-plugin-webext/blob/example) directory contains a working example.

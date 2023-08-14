@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "example",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist/js && rollup --config",
+    "watch": "rimraf dist/js && rollup --config --watch"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.0",
+    "rollup": "^3.21.0",
+    "rollup-plugin-webext": "^1.0.0"
+  }
+}
