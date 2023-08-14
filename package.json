@@ -7,6 +7,8 @@
     "main": "./index.js",
     "exports": "./index.js",
     "keywords": [
+        "rollup",
+        "plugin",
         "webext",
         "web-ext",
         "web",
